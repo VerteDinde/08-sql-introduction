@@ -147,7 +147,7 @@ app.listen(PORT, function() {
 //////// ** DATABASE LOADER ** ////////
 ////////////////////////////////////////
 function loadArticles() {
-  // DONE NOTE: We're selecting everything from the table and returning the number of records within the table to the client. 
+  // DONE NOTE: We're selecting everything from the table and returning the number of records within the table to the client.
   // If there is nothing in the table, we're reading the file 'hackerIpsum.js', parsing the JSON information to a string and populating the table with into new fields and records, with values going into each record. We're then sending those back to our client to be displayed on screen.
   client.query('SELECT COUNT(*) FROM articles')
   .then(result => {
